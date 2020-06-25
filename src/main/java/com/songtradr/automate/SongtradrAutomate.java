@@ -14,6 +14,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import org.openqa.selenium.JavascriptExecutor;
@@ -21,6 +22,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import com.songtradr.util.Xpaths;
 
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 
 import com.DeathByCaptcha.AccessDeniedException;
 import com.DeathByCaptcha.Client;
@@ -68,12 +70,12 @@ public class SongtradrAutomate {
 		String pageUrl = driver.getCurrentUrl();
 		// driver.findElement(By.xpath(fetchxpath.Captchaclick)).click();
 
-		captchaBypassing(driver, dbCaptchaUserName, dbCaptchaPassword, splitsitekey, pageUrl);
+		captchaBypassing(driver, dbCaptchaUserName, dbCaptchaPassword, splitsitekey, pageUrl, fetchxpath);
 
 	}
 
 	private void captchaBypassing(WebDriver driver, String dbCaptchaUserName, String dbCaptchaPassword,
-			String splitsitekey, String pageUrl) {
+			String splitsitekey, String pageUrl, Xpaths fetchxpath) {
 		JSONObject tokenParams = new JSONObject();
 		try {
 			tokenParams.put("proxy", "");
@@ -137,7 +139,7 @@ public class SongtradrAutomate {
 			js.executeScript(solvecaptchascript);
 			js.executeScript("document.forms[0].submit();");
 			Thread.sleep(20000);
-			openSellerDashboard(driver);
+			openSellerDashboard(driver, fetchxpath);
 		} catch (com.DeathByCaptcha.Exception e) {
 			System.out.println(e);
 		} catch (InterruptedException e) {
@@ -146,11 +148,10 @@ public class SongtradrAutomate {
 		}
 	}
 
-	private void openSellerDashboard(WebDriver driver) {
+	private void openSellerDashboard(WebDriver driver, Xpaths fetchxpath) {
 		driver.get("https://www.songtradr.com/user/dashboard/seller");
 		List<WebElement> anchors = driver.findElements(By.tagName("a"));
 		Iterator<WebElement> i = anchors.iterator();
-		
 
 		while (i.hasNext()) {
 			WebElement anchor = i.next();
@@ -159,20 +160,38 @@ public class SongtradrAutomate {
 				break;
 			}
 		}
-		driver.get("https://www.songtradr.com/user/songv2/uploads");
-		Xpaths fetchxpath = new Xpaths();
-		/*
-		 * WebElement webElement =
-		 * driver.findElement(By.xpath(fetchxpath.termCondition)); for (int count = 0;
-		 * count < 2; count++) { webElement.click(); }
-		 */
 
-		WebElement webElement = driver.findElement(By.xpath("//input[@type='checkbox']"));
-		for (int count = 0; count < 1; count++) {
-			webElement.click();
+		//driver.get("https://www.songtradr.com/user/songv2/uploads");
+
+		WebElement checkBoxElement = driver.findElement(By.xpath(fetchxpath.termCondition));
+		System.out.println(checkBoxElement.getSize());
+		System.out.println(checkBoxElement.getTagName());
+
+		checkBoxElement.click(); // now it clicks on element
+		File folder = new File("D:\\upload");
+		File[] files = folder.listFiles();
+		String filesList = "";
+		for(int fileNo = 0; fileNo < files.length;fileNo++){
+		    filesList += (fileNo != 0 ?"\n":"") + files[fileNo].getAbsolutePath();
 		}
+		
+		System.out.println(filesList);
+		
+		WebElement fileInput = driver.findElement(By.xpath(fetchxpath.browseButton));
+		//fileInput.click();
+		fileInput.clear();
+		fileInput.sendKeys("D:/upload/1.mp3");
+		
+		
+		//driver.findElement(By.xpath(fetchxpath.version)).click();
+		//driver.findElement(By.xpath(fetchxpath.submitAndContinue)).click();
+		//driver.findElement(By.cssSelector("div[class='submitbtnsec'] > button[type='submit']")).click();
 
-		driver.findElement(By.xpath(fetchxpath.browsebutton)).click();
+
+		//Select dropDown = new Select(driver.findElement(By.xpath(""))); 
+		
+
+		
 	}
 
 }
