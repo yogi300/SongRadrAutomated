@@ -1,81 +1,54 @@
 package com.songtradr.automate;
 
+import WebDriver.PageBase;
+import com.DeathByCaptcha.*;
+import com.songtradr.util.Xpaths;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import java.awt.*;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
+import java.io.*;
+import java.lang.Exception;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-//import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+public class SongtradrAutomate extends PageBase {
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import org.openqa.selenium.JavascriptExecutor;
-
-import com.songtradr.util.Xpaths;
-
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-
-import com.DeathByCaptcha.AccessDeniedException;
-import com.DeathByCaptcha.Client;
-import com.DeathByCaptcha.HttpClient;
-import com.DeathByCaptcha.SocketClient;
-import com.google.common.util.concurrent.Uninterruptibles;
-import com.DeathByCaptcha.Captcha;
-
-public class SongtradrAutomate {
+	String rootUrl = "https://www.songtradr.com/";
+	Xpaths getXpath = new Xpaths();
 
 	public void loginInSongTradr() {
-		System.setProperty("webdriver.gecko.driver",
-				"C:\\Users\\Rakesh Sharma\\Downloads\\geckodriver-v0.26.0-win64\\geckodriver.exe");
-
-		WebDriver driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
-		Xpaths fetchxpath = new Xpaths();
-		driver.get("https://www.songtradr.com/");
+		driver.get(rootUrl);
 		// xpath of login : //button[text()='Log In']
-		driver.findElement(By.xpath(fetchxpath.loginButton)).click();
+		driver.findElement(By.xpath(getXpath.loginButton)).click();
 		// xpath if id: //input[@id='EmailAddress']
 		// id: info@melm.rocks pwd:dfRtg0#%
 		String id = "info@melm.rocks";
 		String pwd = "!!Music2020!!";
 		String dbCaptchaUserName = "kegelbrother";
 		String dbCaptchaPassword = "Steuer99";
-		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(fetchxpath.id)));
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(fetchxpath.id)));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(fetchxpath.id)));
-		WebElement mp = driver.findElement(By.xpath(fetchxpath.id));
-
-		Actions act = new Actions(driver);
-		act.moveToElement(mp).sendKeys(id).build().perform();
-		driver.findElement(By.xpath(fetchxpath.password)).sendKeys(pwd);
-		// wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(fetchxpath.Captchaclick)));
-		// WebElement mp1 = driver.findElement(By.xpath(fetchxpath.Captchaclick));
-		// Actions act1 = new Actions(driver);
-		// act1.moveToElement(mp1).click().perform();
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(fetchxpath.sitekey)));
-		String sitekey = driver.findElement(By.xpath(fetchxpath.sitekey)).getAttribute("src");
+		sendKeysWhenElementIntractable(getXpath.id,id);
+		sendKeysWhenElementIntractable(getXpath.password,pwd);
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(getXpath.sitekey)));
+		String sitekey = driver.findElement(By.xpath(getXpath.sitekey)).getAttribute("src");
 		System.out.println(sitekey);
 		String splitsitekey = sitekey.split("&")[1].split("=")[1];
-		String pageUrl = driver.getCurrentUrl();
-		// driver.findElement(By.xpath(fetchxpath.Captchaclick)).click();
-
-		captchaBypassing(driver, dbCaptchaUserName, dbCaptchaPassword, splitsitekey, pageUrl, fetchxpath);
-
+		captchaBypassing(dbCaptchaUserName, dbCaptchaPassword, splitsitekey);
 	}
 
-	private void captchaBypassing(WebDriver driver, String dbCaptchaUserName, String dbCaptchaPassword,
-			String splitsitekey, String pageUrl, Xpaths fetchxpath) {
+	private void captchaBypassing(String dbCaptchaUserName, String dbCaptchaPassword,
+			String splitsitekey) {
+		String pageUrl = driver.getCurrentUrl();
 		JSONObject tokenParams = new JSONObject();
 		try {
 			tokenParams.put("proxy", "");
@@ -106,7 +79,15 @@ public class SongtradrAutomate {
 		Client client = (Client) (new HttpClient(dbCaptchaUserName, dbCaptchaPassword));
 		try {
 			try {
-				System.out.println("Your balance is " + client.getBalance() + " US cents");
+				try {
+					System.out.println("Your balance is " + client.getBalance() + " US cents");
+				} catch (AccessDeniedException e) {
+					e.printStackTrace();
+				} catch (InvalidCaptchaException e) {
+					e.printStackTrace();
+				} catch (ServiceOverloadException e) {
+					e.printStackTrace();
+				}
 			} catch (IOException e) {
 				System.out.println("Failed fetching balance: " + e.toString());
 				return;
@@ -128,6 +109,12 @@ public class SongtradrAutomate {
 			} catch (IOException e) {
 				System.out.println("Failed uploading CAPTCHA");
 				return;
+			} catch (ServiceOverloadException e) {
+				e.printStackTrace();
+			} catch (AccessDeniedException e) {
+				e.printStackTrace();
+			} catch (InvalidCaptchaException e) {
+				e.printStackTrace();
 			}
 			if (null != captcha) {
 				System.out.println("CAPTCHA " + captcha.id + " solved: " + captcha.text);
@@ -138,60 +125,120 @@ public class SongtradrAutomate {
 			System.out.println(solvecaptchascript);
 			js.executeScript(solvecaptchascript);
 			js.executeScript("document.forms[0].submit();");
+			waitingForFullPageLoad();
+			String xpathLoginResult = "//body//*";
+			moveToXpathWe(xpathLoginResult);
+			String loginResult = driver.findElement(By.xpath(xpathLoginResult)).getText();
+			System.out.println(loginResult);
+			JSONObject loginResultJson = new JSONObject(loginResult);
+			String redirect = loginResultJson.get("redirect").toString();
+			System.out.println(rootUrl+redirect);
+			driver.get(rootUrl+redirect);
 			Thread.sleep(20000);
-			openSellerDashboard(driver, fetchxpath);
 		} catch (com.DeathByCaptcha.Exception e) {
 			System.out.println(e);
 		} catch (InterruptedException e) {
-
+			e.printStackTrace();
+		} catch (JSONException e) {
 			e.printStackTrace();
 		}
 	}
 
-	private void openSellerDashboard(WebDriver driver, Xpaths fetchxpath) {
-		driver.get("https://www.songtradr.com/user/dashboard/seller");
-		List<WebElement> anchors = driver.findElements(By.tagName("a"));
-		Iterator<WebElement> i = anchors.iterator();
-
-		while (i.hasNext()) {
-			WebElement anchor = i.next();
-			if (anchor.getAttribute("href").contains("/user/songv2/uploads")) {
-				anchor.click();
-				break;
+	public void uploadAllAlbums() {
+		clickWhenVisibleAndClickable(getXpath.uploadButton);
+		clickWhenVisibleAndClickable(getXpath.checkboxTermsAndConditions);
+		File directory = new File(getXpath.allAlbumPath);
+		File[] objects = directory.listFiles();
+		for (File object: objects) {
+			if (object.isDirectory()) {
+				try {
+					uploadAlbum(object);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+			else if (object.isFile()) {
+				System.out.println("Do not place any files here. " +
+						"Only all album directories are required here");
+			}
+			else {
+				System.out.println("Do not place any other objects here. " +
+						"Only all album directories are required here");
 			}
 		}
-
-		//driver.get("https://www.songtradr.com/user/songv2/uploads");
-
-		WebElement checkBoxElement = driver.findElement(By.xpath(fetchxpath.termCondition));
-		System.out.println(checkBoxElement.getSize());
-		System.out.println(checkBoxElement.getTagName());
-
-		checkBoxElement.click(); // now it clicks on element
-		File folder = new File("D:\\upload");
-		File[] files = folder.listFiles();
-		String filesList = "";
-		for(int fileNo = 0; fileNo < files.length;fileNo++){
-		    filesList += (fileNo != 0 ?"\n":"") + files[fileNo].getAbsolutePath();
-		}
-		
-		System.out.println(filesList);
-		
-		WebElement fileInput = driver.findElement(By.xpath(fetchxpath.browseButton));
-		//fileInput.click();
-		fileInput.clear();
-		fileInput.sendKeys("D:/upload/1.mp3");
-		
-		
-		//driver.findElement(By.xpath(fetchxpath.version)).click();
-		//driver.findElement(By.xpath(fetchxpath.submitAndContinue)).click();
-		//driver.findElement(By.cssSelector("div[class='submitbtnsec'] > button[type='submit']")).click();
-
-
-		//Select dropDown = new Select(driver.findElement(By.xpath(""))); 
-		
-
-		
 	}
 
+	private void uploadAlbum(File album) throws Exception {
+		System.out.println(album.getName());
+		String albumId = album.getName();
+		File setupXml;
+
+		File [] musicFiles = album.listFiles(new FilenameFilter() {
+			@Override
+			public boolean accept(File dir, String name) {
+				return name.endsWith(".wav");
+			}
+		});
+
+		File [] imageFiles = album.listFiles(new FilenameFilter() {
+			@Override
+			public boolean accept(File dir, String name) {
+				return name.endsWith(".jpg");
+			}
+		});
+
+		File [] configXmls = album.listFiles(new FilenameFilter() {
+			@Override
+			public boolean accept(File dir, String name) {
+				return name.endsWith(".xml");
+			}
+		});
+
+		if (musicFiles.length < 1) {
+			throw new Exception("No Music Files to upload in this album." +
+					"Please place music file having of type wav in album");
+		}
+
+		if (imageFiles.length != 1) {
+			throw new Exception("There should be 1 Album cover image in Album Path." +
+					" Either there is no image file or there is more than 1 image file");
+		} else {
+			File imageFile = imageFiles[0];
+		}
+
+		if (configXmls.length != 1) {
+			throw new Exception("There should be 1 configXml in Album Path." +
+					" Either there is no configXml or there is more than 1 configXmls");
+		} else {
+			File configXml = configXmls[0];
+		}
+
+		uploadMusicFiles(musicFiles);
+
+	}
+
+	private void uploadMusicFiles(File [] musicFiles){
+		for (File musicFile : musicFiles) {
+			System.out.println("Uploading Music File "+ musicFile.getName());
+			clickWhenVisibleAndClickable(getXpath.browseButton);
+			try {
+				Robot robot = new Robot();
+				setClipboardData(musicFile.getAbsolutePath());
+				robot.keyPress(KeyEvent.VK_CONTROL);
+				robot.keyPress(KeyEvent.VK_V);
+				robot.keyRelease(KeyEvent.VK_V);
+				robot.keyRelease(KeyEvent.VK_CONTROL);
+				robot.keyPress(KeyEvent.VK_ENTER);
+				robot.keyRelease(KeyEvent.VK_ENTER);
+				waitingForJavaScriptAndJqueryToFinish();
+			} catch (AWTException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+	public static void setClipboardData(String string) {
+		StringSelection stringSelection = new StringSelection(string);
+		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
+	}
 }

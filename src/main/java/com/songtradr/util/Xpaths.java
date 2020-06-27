@@ -9,11 +9,15 @@ public class Xpaths {
 	//public String browsebutton = "//div[contains(@class,'upload_version_row')]//button";
 	public String termCondition = "//div[contains(@class,'upload-section')]//span";
 
+	public String uploadButton = "//*[contains(text(),'Upload')]";
+
+
 	public String inputMulit = "//*[@id=\"UltrawideContentLoad\"]/div/div/div[2]/div[2]/div/div/div[2]/div[1]/input" ;
 	// UPLOAD MUSIC Module
 	
-	public String checkboxTermsAndConditions = "//div[@id='UltrawideContentLoad']//span";
-	public String browseButton = "//div[@id='UltrawideContentLoad']//button";
+	public String checkboxTermsAndConditions = "//span[contains(@class,'checkbox')]";
+	public String browseButton = "//button[text()='Browse']";
+	public String allAlbumPath = "C:\\Users\\Public\\songtradr-releases";
 	public String version = "//div[@class='songs_submission_section']//select";
 	public String submitAndContinue = "//button[text()='Submit & Continue']";
 
