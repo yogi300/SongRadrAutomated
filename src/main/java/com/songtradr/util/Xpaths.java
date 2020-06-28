@@ -21,11 +21,16 @@ public class Xpaths {
 	public String uploadInput = ".//button[text()='Browse']/../input";
 	public String checkFilesUploading = ".//*[text()='Upload Status']";
 	public String pendingSubmissions = ".//*[@class='songs_submission_section']" +
-			".//*[contains(@class,'submissions_file_row ')]";
+			"//*[contains(@class,'submissions_file_row ')]";
 	public String pendingFilename = ".//*[@class='submission-filename']";
 	public String selectVersion = ".//select";
 	public String submitAndContinue = ".//button[text()='Submit & Continue']";
-
+	public String pendingMusicSubmission(String musicFilename) {
+		String xpath = ".//*[@class='songs_submission_section']//*[text()='"
+				+ musicFilename
+				+ "']/ancestor::*[contains(@class,'submissions_file_row')]";
+		return xpath;
+	}
 	// Recording Page
 
 	public String songTitle_RecordingPage = ".//div[@class='card-body']//input";
