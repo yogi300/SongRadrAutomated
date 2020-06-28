@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class PageBase {
@@ -43,13 +44,11 @@ public class PageBase {
         * Step 5 : Wait for ajax load and page load to complete, which may have triggered by Mouse Movement.
         * */
         waitingForFullPageLoad();
-        waitingForJavaScriptAndJqueryToFinish();
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(xpathWe)));
         WebElement weForXpath = driver.findElement(By.xpath(xpathWe));
         act.moveToElement(weForXpath).perform();
         System.out.println("Hovering on Webelement having xpath " + xpathWe);
         waitingForFullPageLoad();
-        waitingForJavaScriptAndJqueryToFinish();
     }
 
     public void sendKeysWhenElementIntractable(String xpathWe, String textToSend) {
@@ -86,12 +85,23 @@ public class PageBase {
     }
 
     public void scrollByXpath(String xpathOfElement) {
-        waitingForJavaScriptAndJqueryToFinish();
+        waitingForFullPageLoad();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpathOfElement)));
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpathOfElement)));
         WebElement we = driver.findElement(By.xpath(xpathOfElement));
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", we);
-        waitingForJavaScriptAndJqueryToFinish();
+        scrollByWebElement(we);
     }
 
+    public void scrollByWebElement(WebElement we) {
+        waitingForFullPageLoad();
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", we);
+        waitingForFullPageLoad();
+    }
+
+    public void selectFromDropdown(WebElement we, String xpathSelect, String chosenValue) {
+        WebElement weSelect = we.findElement(By.xpath(xpathSelect));
+        Select dropDown = new Select(weSelect);
+        dropDown.selectByVisibleText(chosenValue);
+    }
 }
+

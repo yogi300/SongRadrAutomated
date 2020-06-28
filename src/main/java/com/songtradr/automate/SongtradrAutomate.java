@@ -29,10 +29,8 @@ public class SongtradrAutomate extends PageBase {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		driver.get(rootUrl);
-		// xpath of login : //button[text()='Log In']
-		driver.findElement(By.xpath(getXpath.loginButton)).click();
-		// xpath if id: //input[@id='EmailAddress']
-		// id: info@melm.rocks pwd:dfRtg0#%
+		clickWhenVisibleAndClickable(getXpath.loginButton);
+		waitingForJavaScriptAndJqueryToFinish();
 		String id = "info@melm.rocks";
 		String pwd = "!!Music2020!!";
 		String dbCaptchaUserName = "kegelbrother";
@@ -118,10 +116,11 @@ public class SongtradrAutomate extends PageBase {
 			}
 			if (null != captcha) {
 				System.out.println("CAPTCHA " + captcha.id + " solved: " + captcha.text);
+				// TODO : Report bad captcha solutions.
 			}
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			String solvecaptchascript = "document.getElementById('g-recaptcha-response').innerHTML='" + captcha.text
-					+ "';";
+			String solvecaptchascript = "document.getElementById('g-recaptcha-response').innerHTML='"
+					+ captcha.text + "';";
 			System.out.println(solvecaptchascript);
 			js.executeScript(solvecaptchascript);
 			js.executeScript("document.forms[0].submit();");
@@ -146,7 +145,6 @@ public class SongtradrAutomate extends PageBase {
 
 	public void uploadAllAlbums() {
 		clickWhenVisibleAndClickable(getXpath.uploadButton);
-		clickWhenVisibleAndClickable(getXpath.checkboxTermsAndConditions);
 		File directory = new File(getXpath.allAlbumPath);
 		File[] objects = directory.listFiles();
 		for (File object: objects) {
@@ -214,31 +212,47 @@ public class SongtradrAutomate extends PageBase {
 		}
 
 		uploadMusicFiles(musicFiles);
-
+        submitMusicFiles(musicFiles);
 	}
 
-	private void uploadMusicFiles(File [] musicFiles){
+	private void uploadMusicFiles(File [] musicFiles) throws InterruptedException {
 		for (File musicFile : musicFiles) {
-			System.out.println("Uploading Music File "+ musicFile.getName());
-			clickWhenVisibleAndClickable(getXpath.browseButton);
-			try {
-				Robot robot = new Robot();
-				setClipboardData(musicFile.getAbsolutePath());
-				robot.keyPress(KeyEvent.VK_CONTROL);
-				robot.keyPress(KeyEvent.VK_V);
-				robot.keyRelease(KeyEvent.VK_V);
-				robot.keyRelease(KeyEvent.VK_CONTROL);
-				robot.keyPress(KeyEvent.VK_ENTER);
-				robot.keyRelease(KeyEvent.VK_ENTER);
-				waitingForJavaScriptAndJqueryToFinish();
-			} catch (AWTException e) {
-				e.printStackTrace();
-			}
+			System.out.println("Uploading Music File "+ musicFile.getName()
+					+ "from path "+ musicFile.getAbsolutePath());
+			Thread.sleep(2000);
+			driver.navigate().refresh();
+            clickWhenVisibleAndClickable(getXpath.checkboxTermsAndConditions);
+			WebElement fileInput = driver.findElement(By.xpath(getXpath.uploadInput));
+			waitingForJavaScriptAndJqueryToFinish();
+			fileInput.sendKeys(musicFile.getAbsolutePath());
+            try {
+                Thread.sleep(6000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
 		}
 	}
 
-	public static void setClipboardData(String string) {
-		StringSelection stringSelection = new StringSelection(string);
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
-	}
+	public void submitMusicFiles(File [] musicFiles) {
+	    for (File musicFile : musicFiles ) {
+            moveToXpathWe(getXpath.pendingSubmissions);
+            List<WebElement> wePendingSubmissions = driver.findElements
+                    (By.xpath(getXpath.pendingSubmissions));
+            for (WebElement wePendingSubmission : wePendingSubmissions) {
+                scrollByWebElement(wePendingSubmission);
+                String musicFileName = wePendingSubmission.findElement
+                        (By.xpath(getXpath.pendingFilename)).getText();
+                String uploadedMusicFileName = musicFile.getName().split("\\.")[0];
+                System.out.println("uploadedMusicFileName is " + uploadedMusicFileName
+                        + ". Comparing with pending musicFileName " + musicFileName + "." +
+                        "If same name, uploaded file is pending, it will be submitted.");
+                if (uploadedMusicFileName.equals(musicFileName)) {
+                    System.out.println("Submitting Music File " + musicFileName);
+                    selectFromDropdown(wePendingSubmission,
+                            getXpath.selectVersion, "Main Mix");
+                }
+                clickWhenVisibleAndClickable(getXpath.submitAndContinue);
+            }
+        }
+    }
 }
