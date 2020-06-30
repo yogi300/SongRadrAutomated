@@ -179,10 +179,11 @@ public class SongtradrAutomate {
 		
 		WebElement fileInput = driver.findElement(By.xpath(fetchxpath.browseButton));
 		//fileInput.click();
-		fileInput.clear();
+		//fileInput.clear();
 		fileInput.sendKeys("D:/upload/1.mp3");
 		
-		
+		SongRecording songRecording = new SongRecording() ; 
+		songRecording.inputMetaDataInfoAndRecord(driver, fetchxpath);
 		//driver.findElement(By.xpath(fetchxpath.version)).click();
 		//driver.findElement(By.xpath(fetchxpath.submitAndContinue)).click();
 		//driver.findElement(By.cssSelector("div[class='submitbtnsec'] > button[type='submit']")).click();

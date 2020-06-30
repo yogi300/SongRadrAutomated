@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="utf-8"?><METADATA>
+  <product>
+    <label_id>Tradio Tmusic</label_id>
+    <ean_code></ean_code>
+    <product_title>
+      <title>Ascending</title>
+    </product_title>
+    <product_artist>
+      <show_as_artist>Peppermint Tunes</show_as_artist>
+    </product_artist>
+    <copyright>
+      <info year="2020">Tradio Tmusic</info>
+    </copyright>
+    <pline>
+      <info year="2020">Tradio Tmusic</info>
+    </pline>
+    <media_type>Album</media_type>
+    <price_type></price_type>
+    <total_tracks>14</total_tracks>
+    <dod_active>false</dod_active>
+    <product_items>
+      <item_file file_type="jpg" sub_file_type="2400x2400" usage_type="local_cover">/.jpg</item_file>
+    </product_items>
+    <genre>
+      <genre_id></genre_id>
+    </genre>
+    <explicit_content>false</explicit_content>
+    <release>
+      <territory>+ww</territory>
+      <release_date>2020-07-03</release_date>
+      <permission>yes</permission>
+      <offers>
+        <digital_release_date>2020-07-03</digital_release_date>
+        <digital_cancellation_date>2070-12-31</digital_cancellation_date>
+      </offers>
+    </release>
+    <productno>FCDX10691</productno>
+    <languagepr>en</languagepr>
+    <gapless>false</gapless>
+    <preorder>false</preorder>
+    <preorder_prelistening>false</preorder_prelistening>
+    <preorder_date_selection>asap</preorder_date_selection>
+    <preorder_date>2020-07-03</preorder_date>
+    <promo_activ>false</promo_activ>
+    <track>
+      <track_isrc></track_isrc>
+      <track_artist>
+        <show_as_artist>Peppermint Tunes</show_as_artist>
+        <show_as_composer>Linda Marsh</show_as_composer>
+        <show_as_songwriter>Linda Marsh</show_as_songwriter>
+      </track_artist>
+      <track_type>audio</track_type>
+      <track_title>
+        <title>Second Coming In Grade</title>
+      </track_title>
+      <track_items>
+        <item_file file_type="wav" sub_file_type="441_16" usage_type="local_audio">/_1_01.wav</item_file>
+      </track_items>
+      <copyright>
+        <info year="2020">Tradio Tmusic</info>
+      </copyright>
+      <pline>
+        <info year="2020">Tradio Tmusic</info>
+      </pline>
+      <track_number>1</track_number>
+      <set_number>1</set_number>
+      <genre>
+        <genre_id></genre_id>
+      </genre>
+      <explicit_content>false</explicit_content>
+      <explicit_edit>false</explicit_edit>
+      <soundalike>false</soundalike>
+      <mechanicals>own</mechanicals>
+      <public_domain_composition>false</public_domain_composition>
+      <public_domain_recording>false</public_domain_recording>
+      <instant_gratification>false</instant_gratification>
+      <instant_gratification_dateselection>asap</instant_gratification_dateselection>
+      <instant_gratification_date>2020-02-19</instant_gratification_date>
+      <composition>foreign</composition>
+      <yearOfCompositionType>Unknown</yearOfCompositionType>
+      <track_duration>00:00:00</track_duration>
+      <release>
+        <territory>+ww</territory>
+        <release_date>2020-07-03</release_date>
+        <permission>yes</permission>
+        <offers>
+          <digital_release_date>2020-07-03</digital_release_date>
+        </offers>
+      </release>
+      <recording>studio</recording>
+      <recordingyear>2020</recordingyear>
+      <recordingcountry>ie</recordingcountry>
+      <languagepr>en</languagepr>
+      <languageoriginal>en</languageoriginal>
+      <languagelyrics>en</languagelyrics>
+    </track>
+    <track>
+      <track_isrc></track_isrc>
+      <track_artist>
+        <show_as_artist>Peppermint Tunes</show_as_artist>
+        <show_as_composer>Linda Marsh</show_as_composer>
+        <show_as_songwriter>Linda Marsh</show_as_songwriter>
+      </track_artist>
+      <track_type>audio</track_type>
+      <track_title>
+        <title>Responsabilidad</title>
+      </track_title>
+      <track_items>
+        <item_file file_type="wav" sub_file_type="441_16" usage_type="local_audio">/_1_02.wav</item_file>
+      </track_items>
+      <copyright>
+        <info year="2020">Tradio Tmusic</info>
+      </copyright>
+      <pline>
+        <info year="2020">Tradio Tmusic</info>
+      </pline>
+      <track_number>2</track_number>
+      <set_number>1</set_number>
+      <genre>
+        <genre_id></genre_id>
+      </genre>
+      <explicit_content>false</explicit_content>
+      <explicit_edit>false</explicit_edit>
+      <soundalike>false</soundalike>
+      <mechanicals>own</mechanicals>
+      <public_domain_composition>false</public_domain_composition>
+      <public_domain_recording>false</public_domain_recording>
+      <instant_gratification>false</instant_gratification>
+      <instant_gratification_dateselection>asap</instant_gratification_dateselection>
+      <instant_gratification_date>2020-02-19</instant_gratification_date>
+      <composition>foreign</composition>
+      <yearOfCompositionType>Unknown</yearOfCompositionType>
+      <track_duration>00:00:00</track_duration>
+      <release>
+        <territory>+ww</territory>
+        <release_date>2020-07-03</release_date>
+        <permission>yes</permission>
+        <offers>
+          <digital_release_date>2020-07-03</digital_release_date>
+        </offers>
+      </release>
+      <recording>studio</recording>
+      <recordingyear>2020</recordingyear>
+      <recordingcountry>ie</recordingcountry>
+      <languagepr>en</languagepr>
+      <languageoriginal>en</languageoriginal>
+      <languagelyrics>en</languagelyrics>
+    </track>
+    <track>
+      <track_isrc></track_isrc>
+      <track_artist>
+        <show_as_artist>Peppermint Tunes</show_as_artist>
+        <show_as_composer>Linda Marsh</show_as_composer>
+        <show_as_songwriter>Linda Marsh</show_as_songwriter>
+      </track_artist>
+      <track_type>audio</track_type>
+      <track_title>
+        <title>Dead</title>
+      </track_title>
+      <track_items>
+        <item_file file_type="wav" sub_file_type="441_16" usage_type="local_audio">/_1_03.wav</item_file>
+      </track_items>
+      <copyright>
+        <info year="2020">Tradio Tmusic</info>
+      </copyright>
+      <pline>
+        <info year="2020">Tradio Tmusic</info>
+      </pline>
+      <track_number>3</track_number>
+      <set_number>1</set_number>
+      <genre>
+        <genre_id></genre_id>
+      </genre>
+      <explicit_content>false</explicit_content>
+      <explicit_edit>false</explicit_edit>
+      <soundalike>false</soundalike>
+      <mechanicals>own</mechanicals>
+      <public_domain_composition>false</public_domain_composition>
+      <public_domain_recording>false</public_domain_recording>
+      <instant_gratification>false</instant_gratification>
+      <instant_gratification_dateselection>asap</instant_gratification_dateselection>
+      <instant_gratification_date>2020-02-19</instant_gratification_date>
+      <composition>foreign</composition>
+      <yearOfCompositionType>Unknown</yearOfCompositionType>
+      <track_duration>00:00:00</track_duration>
+      <release>
+        <territory>+ww</territory>
+        <release_date>2020-07-03</release_date>
+        <permission>yes</permission>
+        <offers>
+          <digital_release_date>2020-07-03</digital_release_date>
+        </offers>
+      </release>
+      <recording>studio</recording>
+      <recordingyear>2020</recordingyear>
+      <recordingcountry>ie</recordingcountry>
+      <languagepr>en</languagepr>
+      <languageoriginal>en</languageoriginal>
+      <languagelyrics>en</languagelyrics>
+    </track>
+    <track>
+      <track_isrc></track_isrc>
+      <track_artist>
+        <show_as_artist>Peppermint Tunes</show_as_artist>
+        <show_as_composer>Linda Marsh</show_as_composer>
+        <show_as_songwriter>Linda Marsh</show_as_songwriter>
+      </track_artist>
+      <track_type>audio</track_type>
+      <track_title>
+        <title>From The East</title>
+      </track_title>
+      <track_items>
+        <item_file file_type="wav" sub_file_type="441_16" usage_type="local_audio">/_1_04.wav</item_file>
+      </track_items>
+      <copyright>
+        <info year="2020">Tradio Tmusic</info>
+      </copyright>
+      <pline>
+        <info year="2020">Tradio Tmusic</info>
+      </pline>
+      <track_number>4</track_number>
+      <set_number>1</set_number>
+      <genre>
+        <genre_id></genre_id>
+      </genre>
+      <explicit_content>false</explicit_content>
+      <explicit_edit>false</explicit_edit>
+      <soundalike>false</soundalike>
+      <mechanicals>own</mechanicals>
+      <public_domain_composition>false</public_domain_composition>
+      <public_domain_recording>false</public_domain_recording>
+      <instant_gratification>false</instant_gratification>
+      <instant_gratification_dateselection>asap</instant_gratification_dateselection>
+      <instant_gratification_date>2020-02-19</instant_gratification_date>
+      <composition>foreign</composition>
+      <yearOfCompositionType>Unknown</yearOfCompositionType>
+      <track_duration>00:00:00</track_duration>
+      <release>
+        <territory>+ww</territory>
+        <release_date>2020-07-03</release_date>
+        <permission>yes</permission>
+        <offers>
+          <digital_release_date>2020-07-03</digital_release_date>
+        </offers>
+      </release>
+      <recording>studio</recording>
+      <recordingyear>2020</recordingyear>
+      <recordingcountry>ie</recordingcountry>
+      <languagepr>en</languagepr>
+      <languageoriginal>en</languageoriginal>
+      <languagelyrics>en</languagelyrics>
+    </track>
+    <track>
+      <track_isrc></track_isrc>
+      <track_artist>
+        <show_as_artist>Peppermint Tunes</show_as_artist>
+        <show_as_composer>Linda Marsh</show_as_composer>
+        <show_as_songwriter>Linda Marsh</show_as_songwriter>
+      </track_artist>
+      <track_type>audio</track_type>
+      <track_title>
+        <title>Summer Fun</title>
+      </track_title>
+      <track_items>
+        <item_file file_type="wav" sub_file_type="441_16" usage_type="local_audio">/_1_05.wav</item_file>
+      </track_items>
+      <copyright>
+        <info year="2020">Tradio Tmusic</info>
+      </copyright>
+      <pline>
+        <info year="2020">Tradio Tmusic</info>
+      </pline>
+      <track_number>5</track_number>
+      <set_number>1</set_number>
+      <genre>
+        <genre_id></genre_id>
+      </genre>
+      <explicit_content>false</explicit_content>
+      <explicit_edit>false</explicit_edit>
+      <soundalike>false</soundalike>
+      <mechanicals>own</mechanicals>
+      <public_domain_composition>false</public_domain_composition>
+      <public_domain_recording>false</public_domain_recording>
+      <instant_gratification>false</instant_gratification>
+      <instant_gratification_dateselection>asap</instant_gratification_dateselection>
+      <instant_gratification_date>2020-02-19</instant_gratification_date>
+      <composition>foreign</composition>
+      <yearOfCompositionType>Unknown</yearOfCompositionType>
+      <track_duration>00:00:00</track_duration>
+      <release>
+        <territory>+ww</territory>
+        <release_date>2020-07-03</release_date>
+        <permission>yes</permission>
+        <offers>
+          <digital_release_date>2020-07-03</digital_release_date>
+        </offers>
+      </release>
+      <recording>studio</recording>
+      <recordingyear>2020</recordingyear>
+      <recordingcountry>ie</recordingcountry>
+      <languagepr>en</languagepr>
+      <languageoriginal>en</languageoriginal>
+      <languagelyrics>en</languagelyrics>
+    </track>
+    <track>
+      <track_isrc></track_isrc>
+      <track_artist>
+        <show_as_artist>Peppermint Tunes</show_as_artist>
+        <show_as_composer>Linda Marsh</show_as_composer>
+        <show_as_songwriter>Linda Marsh</show_as_songwriter>
+      </track_artist>
+      <track_type>audio</track_type>
+      <track_title>
+        <title>A Day Off In Wodon</title>
+      </track_title>
+      <track_items>
+        <item_file file_type="wav" sub_file_type="441_16" usage_type="local_audio">/_1_06.wav</item_file>
+      </track_items>
+      <copyright>
+        <info year="2020">Tradio Tmusic</info>
+      </copyright>
+      <pline>
+        <info year="2020">Tradio Tmusic</info>
+      </pline>
+      <track_number>6</track_number>
+      <set_number>1</set_number>
+      <genre>
+        <genre_id></genre_id>
+      </genre>
+      <explicit_content>false</explicit_content>
+      <explicit_edit>false</explicit_edit>
+      <soundalike>false</soundalike>
+      <mechanicals>own</mechanicals>
+      <public_domain_composition>false</public_domain_composition>
+      <public_domain_recording>false</public_domain_recording>
+      <instant_gratification>false</instant_gratification>
+      <instant_gratification_dateselection>asap</instant_gratification_dateselection>
+      <instant_gratification_date>2020-02-19</instant_gratification_date>
+      <composition>foreign</composition>
+      <yearOfCompositionType>Unknown</yearOfCompositionType>
+      <track_duration>00:00:00</track_duration>
+      <release>
+        <territory>+ww</territory>
+        <release_date>2020-07-03</release_date>
+        <permission>yes</permission>
+        <offers>
+          <digital_release_date>2020-07-03</digital_release_date>
+        </offers>
+      </release>
+      <recording>studio</recording>
+      <recordingyear>2020</recordingyear>
+      <recordingcountry>ie</recordingcountry>
+      <languagepr>en</languagepr>
+      <languageoriginal>en</languageoriginal>
+      <languagelyrics>en</languagelyrics>
+    </track>
+    <track>
+      <track_isrc></track_isrc>
+      <track_artist>
+        <show_as_artist>Peppermint Tunes</show_as_artist>
+        <show_as_composer>Linda Marsh</show_as_composer>
+        <show_as_songwriter>Linda Marsh</show_as_songwriter>
+      </track_artist>
+      <track_type>audio</track_type>
+      <track_title>
+        <title>Rude Awakening Me Myself</title>
+      </track_title>
+      <track_items>
+        <item_file file_type="wav" sub_file_type="441_16" usage_type="local_audio">/_1_07.wav</item_file>
+      </track_items>
+      <copyright>
+        <info year="2020">Tradio Tmusic</info>
+      </copyright>
+      <pline>
+        <info year="2020">Tradio Tmusic</info>
+      </pline>
+      <track_number>7</track_number>
+      <set_number>1</set_number>
+      <genre>
+        <genre_id></genre_id>
+      </genre>
+      <explicit_content>false</explicit_content>
+      <explicit_edit>false</explicit_edit>
+      <soundalike>false</soundalike>
+      <mechanicals>own</mechanicals>
+      <public_domain_composition>false</public_domain_composition>
+      <public_domain_recording>false</public_domain_recording>
+      <instant_gratification>false</instant_gratification>
+      <instant_gratification_dateselection>asap</instant_gratification_dateselection>
+      <instant_gratification_date>2020-02-19</instant_gratification_date>
+      <composition>foreign</composition>
+      <yearOfCompositionType>Unknown</yearOfCompositionType>
+      <track_duration>00:00:00</track_duration>
+      <release>
+        <territory>+ww</territory>
+        <release_date>2020-07-03</release_date>
+        <permission>yes</permission>
+        <offers>
+          <digital_release_date>2020-07-03</digital_release_date>
+        </offers>
+      </release>
+      <recording>studio</recording>
+      <recordingyear>2020</recordingyear>
+      <recordingcountry>ie</recordingcountry>
+      <languagepr>en</languagepr>
+      <languageoriginal>en</languageoriginal>
+      <languagelyrics>en</languagelyrics>
+    </track>
+    <track>
+      <track_isrc></track_isrc>
+      <track_artist>
+        <show_as_artist>Peppermint Tunes</show_as_artist>
+        <show_as_composer>Linda Marsh</show_as_composer>
+        <show_as_songwriter>Linda Marsh</show_as_songwriter>
+      </track_artist>
+      <track_type>audio</track_type>
+      <track_title>
+        <title>Of The Bush</title>
+      </track_title>
+      <track_items>
+        <item_file file_type="wav" sub_file_type="441_16" usage_type="local_audio">/_1_08.wav</item_file>
+      </track_items>
+      <copyright>
+        <info year="2020">Tradio Tmusic</info>
+      </copyright>
+      <pline>
+        <info year="2020">Tradio Tmusic</info>
+      </pline>
+      <track_number>8</track_number>
+      <set_number>1</set_number>
+      <genre>
+        <genre_id></genre_id>
+      </genre>
+      <explicit_content>false</explicit_content>
+      <explicit_edit>false</explicit_edit>
+      <soundalike>false</soundalike>
+      <mechanicals>own</mechanicals>
+      <public_domain_composition>false</public_domain_composition>
+      <public_domain_recording>false</public_domain_recording>
+      <instant_gratification>false</instant_gratification>
+      <instant_gratification_dateselection>asap</instant_gratification_dateselection>
+      <instant_gratification_date>2020-02-19</instant_gratification_date>
+      <composition>foreign</composition>
+      <yearOfCompositionType>Unknown</yearOfCompositionType>
+      <track_duration>00:00:00</track_duration>
+      <release>
+        <territory>+ww</territory>
+        <release_date>2020-07-03</release_date>
+        <permission>yes</permission>
+        <offers>
+          <digital_release_date>2020-07-03</digital_release_date>
+        </offers>
+      </release>
+      <recording>studio</recording>
+      <recordingyear>2020</recordingyear>
+      <recordingcountry>ie</recordingcountry>
+      <languagepr>en</languagepr>
+      <languageoriginal>en</languageoriginal>
+      <languagelyrics>en</languagelyrics>
+    </track>
+    <track>
+      <track_isrc></track_isrc>
+      <track_artist>
+        <show_as_artist>Peppermint Tunes</show_as_artist>
+        <show_as_composer>Linda Marsh</show_as_composer>
+        <show_as_songwriter>Linda Marsh</show_as_songwriter>
+      </track_artist>
+      <track_type>audio</track_type>
+      <track_title>
+        <title>A Wonderful Pair</title>
+      </track_title>
+      <track_items>
+        <item_file file_type="wav" sub_file_type="441_16" usage_type="local_audio">/_1_09.wav</item_file>
+      </track_items>
+      <copyright>
+        <info year="2020">Tradio Tmusic</info>
+      </copyright>
+      <pline>
+        <info year="2020">Tradio Tmusic</info>
+      </pline>
+      <track_number>9</track_number>
+      <set_number>1</set_number>
+      <genre>
+        <genre_id></genre_id>
+      </genre>
+      <explicit_content>false</explicit_content>
+      <explicit_edit>false</explicit_edit>
+      <soundalike>false</soundalike>
+      <mechanicals>own</mechanicals>
+      <public_domain_composition>false</public_domain_composition>
+      <public_domain_recording>false</public_domain_recording>
+      <instant_gratification>false</instant_gratification>
+      <instant_gratification_dateselection>asap</instant_gratification_dateselection>
+      <instant_gratification_date>2020-02-19</instant_gratification_date>
+      <composition>foreign</composition>
+      <yearOfCompositionType>Unknown</yearOfCompositionType>
+      <track_duration>00:00:00</track_duration>
+      <release>
+        <territory>+ww</territory>
+        <release_date>2020-07-03</release_date>
+        <permission>yes</permission>
+        <offers>
+          <digital_release_date>2020-07-03</digital_release_date>
+        </offers>
+      </release>
+      <recording>studio</recording>
+      <recordingyear>2020</recordingyear>
+      <recordingcountry>ie</recordingcountry>
+      <languagepr>en</languagepr>
+      <languageoriginal>en</languageoriginal>
+      <languagelyrics>en</languagelyrics>
+    </track>
+    <track>
+      <track_isrc></track_isrc>
+      <track_artist>
+        <show_as_artist>Peppermint Tunes</show_as_artist>
+        <show_as_composer>Linda Marsh</show_as_composer>
+        <show_as_songwriter>Linda Marsh</show_as_songwriter>
+      </track_artist>
+      <track_type>audio</track_type>
+      <track_title>
+        <title>The Love Doctor</title>
+      </track_title>
+      <track_items>
+        <item_file file_type="wav" sub_file_type="441_16" usage_type="local_audio">/_1_10.wav</item_file>
+      </track_items>
+      <copyright>
+        <info year="2020">Tradio Tmusic</info>
+      </copyright>
+      <pline>
+        <info year="2020">Tradio Tmusic</info>
+      </pline>
+      <track_number>10</track_number>
+      <set_number>1</set_number>
+      <genre>
+        <genre_id></genre_id>
+      </genre>
+      <explicit_content>false</explicit_content>
+      <explicit_edit>false</explicit_edit>
+      <soundalike>false</soundalike>
+      <mechanicals>own</mechanicals>
+      <public_domain_composition>false</public_domain_composition>
+      <public_domain_recording>false</public_domain_recording>
+      <instant_gratification>false</instant_gratification>
+      <instant_gratification_dateselection>asap</instant_gratification_dateselection>
+      <instant_gratification_date>2020-02-19</instant_gratification_date>
+      <composition>foreign</composition>
+      <yearOfCompositionType>Unknown</yearOfCompositionType>
+      <track_duration>00:00:00</track_duration>
+      <release>
+        <territory>+ww</territory>
+        <release_date>2020-07-03</release_date>
+        <permission>yes</permission>
+        <offers>
+          <digital_release_date>2020-07-03</digital_release_date>
+        </offers>
+      </release>
+      <recording>studio</recording>
+      <recordingyear>2020</recordingyear>
+      <recordingcountry>ie</recordingcountry>
+      <languagepr>en</languagepr>
+      <languageoriginal>en</languageoriginal>
+      <languagelyrics>en</languagelyrics>
+    </track>
+    <track>
+      <track_isrc></track_isrc>
+      <track_artist>
+        <show_as_artist>Peppermint Tunes</show_as_artist>
+        <show_as_composer>Linda Marsh</show_as_composer>
+        <show_as_songwriter>Linda Marsh</show_as_songwriter>
+      </track_artist>
+      <track_type>audio</track_type>
+      <track_title>
+        <title>Black Snake</title>
+      </track_title>
+      <track_items>
+        <item_file file_type="wav" sub_file_type="441_16" usage_type="local_audio">/_1_11.wav</item_file>
+      </track_items>
+      <copyright>
+        <info year="2020">Tradio Tmusic</info>
+      </copyright>
+      <pline>
+        <info year="2020">Tradio Tmusic</info>
+      </pline>
+      <track_number>11</track_number>
+      <set_number>1</set_number>
+      <genre>
+        <genre_id></genre_id>
+      </genre>
+      <explicit_content>false</explicit_content>
+      <explicit_edit>false</explicit_edit>
+      <soundalike>false</soundalike>
+      <mechanicals>own</mechanicals>
+      <public_domain_composition>false</public_domain_composition>
+      <public_domain_recording>false</public_domain_recording>
+      <instant_gratification>false</instant_gratification>
+      <instant_gratification_dateselection>asap</instant_gratification_dateselection>
+      <instant_gratification_date>2020-02-19</instant_gratification_date>
+      <composition>foreign</composition>
+      <yearOfCompositionType>Unknown</yearOfCompositionType>
+      <track_duration>00:00:00</track_duration>
+      <release>
+        <territory>+ww</territory>
+        <release_date>2020-07-03</release_date>
+        <permission>yes</permission>
+        <offers>
+          <digital_release_date>2020-07-03</digital_release_date>
+        </offers>
+      </release>
+      <recording>studio</recording>
+      <recordingyear>2020</recordingyear>
+      <recordingcountry>ie</recordingcountry>
+      <languagepr>en</languagepr>
+      <languageoriginal>en</languageoriginal>
+      <languagelyrics>en</languagelyrics>
+    </track>
+    <track>
+      <track_isrc></track_isrc>
+      <track_artist>
+        <show_as_artist>Peppermint Tunes</show_as_artist>
+        <show_as_composer>Linda Marsh</show_as_composer>
+        <show_as_songwriter>Linda Marsh</show_as_songwriter>
+      </track_artist>
+      <track_type>audio</track_type>
+      <track_title>
+        <title>Hold The Land</title>
+      </track_title>
+      <track_items>
+        <item_file file_type="wav" sub_file_type="441_16" usage_type="local_audio">/_1_12.wav</item_file>
+      </track_items>
+      <copyright>
+        <info year="2020">Tradio Tmusic</info>
+      </copyright>
+      <pline>
+        <info year="2020">Tradio Tmusic</info>
+      </pline>
+      <track_number>12</track_number>
+      <set_number>1</set_number>
+      <genre>
+        <genre_id></genre_id>
+      </genre>
+      <explicit_content>false</explicit_content>
+      <explicit_edit>false</explicit_edit>
+      <soundalike>false</soundalike>
+      <mechanicals>own</mechanicals>
+      <public_domain_composition>false</public_domain_composition>
+      <public_domain_recording>false</public_domain_recording>
+      <instant_gratification>false</instant_gratification>
+      <instant_gratification_dateselection>asap</instant_gratification_dateselection>
+      <instant_gratification_date>2020-02-19</instant_gratification_date>
+      <composition>foreign</composition>
+      <yearOfCompositionType>Unknown</yearOfCompositionType>
+      <track_duration>00:00:00</track_duration>
+      <release>
+        <territory>+ww</territory>
+        <release_date>2020-07-03</release_date>
+        <permission>yes</permission>
+        <offers>
+          <digital_release_date>2020-07-03</digital_release_date>
+        </offers>
+      </release>
+      <recording>studio</recording>
+      <recordingyear>2020</recordingyear>
+      <recordingcountry>ie</recordingcountry>
+      <languagepr>en</languagepr>
+      <languageoriginal>en</languageoriginal>
+      <languagelyrics>en</languagelyrics>
+    </track>
+    <track>
+      <track_isrc></track_isrc>
+      <track_artist>
+        <show_as_artist>Peppermint Tunes</show_as_artist>
+        <show_as_composer>Linda Marsh</show_as_composer>
+        <show_as_songwriter>Linda Marsh</show_as_songwriter>
+      </track_artist>
+      <track_type>audio</track_type>
+      <track_title>
+        <title>The Roots Of Power</title>
+      </track_title>
+      <track_items>
+        <item_file file_type="wav" sub_file_type="441_16" usage_type="local_audio">/_1_13.wav</item_file>
+      </track_items>
+      <copyright>
+        <info year="2020">Tradio Tmusic</info>
+      </copyright>
+      <pline>
+        <info year="2020">Tradio Tmusic</info>
+      </pline>
+      <track_number>13</track_number>
+      <set_number>1</set_number>
+      <genre>
+        <genre_id></genre_id>
+      </genre>
+      <explicit_content>false</explicit_content>
+      <explicit_edit>false</explicit_edit>
+      <soundalike>false</soundalike>
+      <mechanicals>own</mechanicals>
+      <public_domain_composition>false</public_domain_composition>
+      <public_domain_recording>false</public_domain_recording>
+      <instant_gratification>false</instant_gratification>
+      <instant_gratification_dateselection>asap</instant_gratification_dateselection>
+      <instant_gratification_date>2020-02-19</instant_gratification_date>
+      <composition>foreign</composition>
+      <yearOfCompositionType>Unknown</yearOfCompositionType>
+      <track_duration>00:00:00</track_duration>
+      <release>
+        <territory>+ww</territory>
+        <release_date>2020-07-03</release_date>
+        <permission>yes</permission>
+        <offers>
+          <digital_release_date>2020-07-03</digital_release_date>
+        </offers>
+      </release>
+      <recording>studio</recording>
+      <recordingyear>2020</recordingyear>
+      <recordingcountry>ie</recordingcountry>
+      <languagepr>en</languagepr>
+      <languageoriginal>en</languageoriginal>
+      <languagelyrics>en</languagelyrics>
+    </track>
+    <track>
+      <track_isrc></track_isrc>
+      <track_artist>
+        <show_as_artist>Peppermint Tunes</show_as_artist>
+        <show_as_composer>Linda Marsh</show_as_composer>
+        <show_as_songwriter>Linda Marsh</show_as_songwriter>
+      </track_artist>
+      <track_type>audio</track_type>
+      <track_title>
+        <title>The Gallery</title>
+      </track_title>
+      <track_items>
+        <item_file file_type="wav" sub_file_type="441_16" usage_type="local_audio">/_1_14.wav</item_file>
+      </track_items>
+      <copyright>
+        <info year="2020">Tradio Tmusic</info>
+      </copyright>
+      <pline>
+        <info year="2020">Tradio Tmusic</info>
+      </pline>
+      <track_number>14</track_number>
+      <set_number>1</set_number>
+      <genre>
+        <genre_id></genre_id>
+      </genre>
+      <explicit_content>false</explicit_content>
+      <explicit_edit>false</explicit_edit>
+      <soundalike>false</soundalike>
+      <mechanicals>own</mechanicals>
+      <public_domain_composition>false</public_domain_composition>
+      <public_domain_recording>false</public_domain_recording>
+      <instant_gratification>false</instant_gratification>
+      <instant_gratification_dateselection>asap</instant_gratification_dateselection>
+      <instant_gratification_date>2020-02-19</instant_gratification_date>
+      <composition>foreign</composition>
+      <yearOfCompositionType>Unknown</yearOfCompositionType>
+      <track_duration>00:00:00</track_duration>
+      <release>
+        <territory>+ww</territory>
+        <release_date>2020-07-03</release_date>
+        <permission>yes</permission>
+        <offers>
+          <digital_release_date>2020-07-03</digital_release_date>
+        </offers>
+      </release>
+      <recording>studio</recording>
+      <recordingyear>2020</recordingyear>
+      <recordingcountry>ie</recordingcountry>
+      <languagepr>en</languagepr>
+      <languageoriginal>en</languageoriginal>
+      <languagelyrics>en</languagelyrics>
+    </track>
+      </product>
+</METADATA>
