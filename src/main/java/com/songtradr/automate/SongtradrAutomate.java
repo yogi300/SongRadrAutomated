@@ -289,7 +289,7 @@ public class SongtradrAutomate extends PageBase {
 					getXpath.selectVersion, "Main Mix");
 			WebElement weSubmit = wePendingMusicSubmission.findElement
 					(By.xpath(getXpath.submitAndContinue));
-			act.moveToElement(weSubmit).perform();
+			act.moveToElement(weSubmit ).perform();
 			act.click().perform();
         }
     }
